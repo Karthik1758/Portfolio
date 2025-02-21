@@ -2,7 +2,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-gray-800 text-white py-16">
+    <section id="contact" className="bg-gray-800 text-white pt-10 pb-40">
       <h2 className="section-heading">Contact Me</h2>
       <div className="flex flex-col items-center gap-4">
         <p className="flex items-center gap-2 text-lg">
