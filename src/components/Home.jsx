@@ -4,7 +4,7 @@ import Button from "./UI/Button";
 
 export default function Home() {
   return (
-    <section>
+    <section id="home">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-20 text-center">
         <motion.h1

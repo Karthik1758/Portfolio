@@ -46,26 +46,29 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.nav
-      className="fixed bottom-8 left-1/3 bg-white/50 backdrop-blur-lg shadow-xl px-6 py-3 rounded-full flex gap-10 items-center justify-center transition-all duration-300 z-50 border border-gray-300"
-      initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
+<motion.nav
+  className="fixed inset-0 flex items-end bottom-8 justify-center z-50"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="bg-white/50 backdrop-blur-lg shadow-xl px-6 py-3 rounded-full flex gap-10 justify-center border border-gray-300">
+  {navItems.map(({ name, icon, id }) => (
+    <a
+      key={id}
+      href={`#${id}`}
+      className={`flex flex-col items-center justify-center text-sm font-medium transition-all duration-300 ${
+        activeSection === id
+          ? "text-white bg-indigo-500 px-4 py-2 rounded-full shadow-lg"
+          : "text-gray-800 hover:text-indigo-600"
+      }`}
     >
-      {navItems.map(({ name, icon, id }) => (
-        <a
-          key={id}
-          href={`#${id}`}
-          className={`flex flex-col items-center text-sm font-medium transition-all duration-300 ${
-            activeSection === id
-              ? "text-white bg-indigo-500 px-4 py-2 rounded-full shadow-lg"
-              : "text-gray-800 hover:text-indigo-600"
-          }`}
-        >
-          {icon}
-          {name}
-        </a>
-      ))}
-    </motion.nav>
+      <span className="flex items-center justify-center">{icon}</span>
+      <span className="mt-1">{name}</span>
+    </a>
+  ))}
+  </div>
+</motion.nav>
+
   );
 }
