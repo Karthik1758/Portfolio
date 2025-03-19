@@ -5,7 +5,7 @@ export default function Experience() {
     {
       role: "Full Stack Developer",
       company: "Pixelvide - Hyderabad, IN",
-      duration: "Jan 2023 - Present",
+      duration: "Jan 2023 - Feb 2025",
       description:
         "Worked on IFMIS Telangana & MP, developed core modules, and optimized database performance. Led code reviews and enhanced system efficiency.",
       icon: <Code className="h-12 w-12 text-indigo-500 mb-4" />, // Developer Icon
