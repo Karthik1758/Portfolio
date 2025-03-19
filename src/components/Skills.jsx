@@ -9,7 +9,7 @@ export default function Skills() {
     },
     {
       name: "Backend",
-      description: "PHP, Laravel, Node.js, .NET, Express.js",
+      description: "PHP, Laravel, Node.js, .NET, Express.js, Python, Django",
       icon: <Server className="h-12 w-12 text-green-500 mb-4" />, // Represents backend services
     },
     {
